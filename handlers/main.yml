@@ -1,0 +1,5 @@
+- name: modprobe ipmi modules
+  command: modprobe {{ item }}
+  with_items:
+    - ipmi_si
+    - ipmi_devintf

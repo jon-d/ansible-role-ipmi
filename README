@@ -1,0 +1,5 @@
+ansible-role-ipmi
+=================
+
+Ansible role to install and configure IPMI on physical machines having an
+IPMI card.

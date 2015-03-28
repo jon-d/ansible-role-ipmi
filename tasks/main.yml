@@ -1,0 +1,9 @@
+- name: install ipmi modules
+  lineinfile: state=present line="{{ item }}" dest=/etc/modules regexp="^{{ item }}"
+  notify: modprobe ipmi modules
+  with_items:
+    - ipmi_si
+    - ipmi_devintf
+
+- name: install ipmi packages
+  apt: pkg=ipmitool state=installed
